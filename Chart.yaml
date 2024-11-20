@@ -1,0 +1,14 @@
+apiVersion: v1
+name: project-zomboid
+version: 1.0.0
+appVersion: public
+description: Project Zomboid dedicated server.
+keywords:
+- game
+- server
+home: https://projectzomboid.com
+sources:
+- https://github.com/Renegade-Master/zomboid-dedicated-server
+maintainers:
+  - name: awickham04
+    url: https://github.com/awickham04

@@ -1,0 +1,44 @@
+image:
+  repository: renegademaster/zomboid-dedicated-server
+  tag: latest
+
+service:
+  type: ClusterIP
+  hostNetwork: "false"
+
+resources:
+  requests:
+    memory: 2G
+    cpu: 1.0
+
+volumes:
+  dataPVC:
+    size: 50Gi
+  configPVC:
+    size: 50Gi
+  storageClassName: "longhorn"
+
+env:
+  adminPassword: changeme
+  adminUsername: admin
+  autosaveInterval: 15m
+  bindIP: 0.0.0.0
+  gamePort: 16261
+  gameVersion: public
+  gcConfig: ZGC
+  hostIP: 0.0.0.0
+  mapNames: Muldraugh, KY
+  maxPlayers: 16
+  maxRAM: 2048m
+  modNames: ''
+  modWorkshopIDs: ''
+  pauseOnEmpty: true
+  publicServer: true
+  queryPort: 16262
+  rconPassword: changeme
+  rconPort: 27015
+  serverName: "There's a snake in my boot"
+  serverPassword: sendhelp
+  steamVAC: true
+  tZ: UTC
+  useSteam: true
