@@ -100,5 +100,5 @@ spec:
       - name: zomboid-config
         persistentVolumeClaim:
           claimName: "{{ .Chart.Name }}-pvc-config"
-      hostNetwork: {{ .Values.config.hostNetwork }}
+      hostNetwork: {{ .Values.service.hostNetwork }}
 
