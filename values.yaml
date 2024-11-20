@@ -37,7 +37,7 @@ env:
   queryPort: 16262
   rconPassword: changeme
   rconPort: 27015
-  serverName: "There's a snake in my boot"
+  serverName: diestoomuch
   serverPassword: sendhelp
   steamVAC: true
   tZ: UTC

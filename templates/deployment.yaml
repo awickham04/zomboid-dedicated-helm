@@ -63,7 +63,7 @@ spec:
         - name: RCON_PORT
           value: "{{ .Values.env.rconPort }}"
         - name: SERVER_NAME
-          value: "{{ .Values.env.serverName | quote }}"
+          value: "{{ .Values.env.serverName }}"
         - name: SERVER_PASSWORD
           value: "{{ .Values.env.serverPassword }}"
         - name: STEAM_VAC
