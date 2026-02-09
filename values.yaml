@@ -1,5 +1,5 @@
 image:
-  repository: jsknnr/project-zomboid-server
+  repository: sknnr/zomboid-dedicated-server
   tag: latest
 
 service:
