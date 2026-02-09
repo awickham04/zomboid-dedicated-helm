@@ -1,5 +1,5 @@
 image:
-  repository: renegademaster/zomboid-dedicated-server
+  repository: jsknnr/project-zomboid-server
   tag: latest
 
 service:
@@ -8,8 +8,8 @@ service:
 
 resources:
   requests:
-    memory: 2G
-    cpu: 1.0
+    memory: 8G
+    cpu: 2.0
 
 volumes:
   dataPVC:
