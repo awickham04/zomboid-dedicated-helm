@@ -19,26 +19,28 @@ volumes:
   storageClassName: "longhorn"
 
 env:
+  antiCheatType21: true
   adminPassword: changeme
   adminUsername: admin
   autosaveInterval: 15m
-  bindIP: 0.0.0.0
+  backupsCount: 5
+  backupsPeriod: 120
+  betaBranch: ''
   gamePort: 16261
-  gameVersion: public
-  gcConfig: ZGC
   hostIP: 0.0.0.0
   mapNames: Muldraugh, KY
   maxPlayers: 16
-  maxRAM: 2048m
+  maxRAM: 8096m
   modNames: ''
   modWorkshopIDs: ''
   pauseOnEmpty: true
-  publicServer: true
+  pingLimit: 400
+  pvp: true
+  public: true
   queryPort: 16262
   rconPassword: changeme
   rconPort: 27015
+  serverIP: ''
   serverName: diestoomuch
   serverPassword: sendhelp
   steamVAC: true
-  tZ: UTC
-  useSteam: true
