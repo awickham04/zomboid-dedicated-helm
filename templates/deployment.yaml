@@ -42,19 +42,21 @@ spec:
           value: "{{ .Values.env.backupsPeriod }}"
         - name: BETA_BRANCH
           value: "{{ .Values.env.betaBranch }}"
+        - name: DIRECT_PORT
+          value: "{{ .Values.env.queryPort }}"
         - name: GAME_PORT
           value: "{{ .Values.env.gamePort }}"
         - name: MAP_NAMES
           value: "{{ .Values.env.mapNames }}"
+        - name: MAX_MEMORY
+          value: "{{ .Values.env.maxRAM }}"
         - name: MAX_PLAYERS
           value: "{{ .Values.env.maxPlayers }}"
-        - name: MAX_RAM
-          value: "{{ .Values.env.maxRAM }}"
+        - name: MOD_IDS
+          value: "{{ .Values.env.modWorkshopIDs }}"
         - name: MOD_NAMES
           value: "{{ .Values.env.modNames }}"
-        - name: MOD_WORKSHOP_IDS
-          value: "{{ .Values.env.modWorkshopIDs }}"
-        - name: PAUSE_ON_EMPTY
+        - name: PAUSE_EMPTY
           value: "{{ .Values.env.pauseOnEmpty }}"
         - name: PING_LIMIT
           value: "{{ .Values.env.pingLimit }}"
@@ -62,8 +64,6 @@ spec:
           value: "{{ .Values.env.pvp }}"
         - name: PUBLIC
           value: "{{ .Values.env.public }}"
-        - name: QUERY_PORT
-          value: "{{ .Values.env.queryPort }}"
         - name: RCON_PASSWORD
           value: "{{ .Values.env.rconPassword }}"
         - name: RCON_PORT
