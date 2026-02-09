@@ -28,20 +28,22 @@ spec:
         resources:
 {{ toYaml .Values.resources | indent 10 }}
         env:
+        - name: ANTI_CHEAT_TYPE21
+          value: "{{ .Values.env.antiCheatType21 }}"
         - name: ADMIN_PASSWORD
           value: "{{ .Values.env.adminPassword }}"
         - name: ADMIN_USERNAME
           value: "{{ .Values.env.adminUsername }}"
         - name: AUTOSAVE_INTERVAL
           value: "{{ .Values.env.autosaveInterval }}"
-        - name: BIND_IP
-          value: "{{ .Values.env.bindIP }}"
+        - name: BACKUPS_COUNT
+          value: "{{ .Values.env.backupsCount  }}"
+        - name: BACKUPS_PERIOD
+          value: "{{ .Values.env.backupsPeriod }}"
+        - name: BETA_BRANCH
+          value: "{{ .Values.env.betaBranch }}"
         - name: GAME_PORT
           value: "{{ .Values.env.gamePort }}"
-        - name: GAME_VERSION
-          value: "{{ .Values.env.gameVersion }}"
-        - name: GC_CONFIG
-          value: "{{ .Values.env.gcConfig }}"
         - name: MAP_NAMES
           value: "{{ .Values.env.mapNames }}"
         - name: MAX_PLAYERS
@@ -54,24 +56,26 @@ spec:
           value: "{{ .Values.env.modWorkshopIDs }}"
         - name: PAUSE_ON_EMPTY
           value: "{{ .Values.env.pauseOnEmpty }}"
-        - name: PUBLIC_SERVER
-          value: "{{ .Values.env.publicServer }}"
+        - name: PING_LIMIT
+          value: "{{ .Values.env.pingLimit }}"
+        - name: PVP
+          value: "{{ .Values.env.pvp }}"
+        - name: PUBLIC
+          value: "{{ .Values.env.public }}"
         - name: QUERY_PORT
           value: "{{ .Values.env.queryPort }}"
         - name: RCON_PASSWORD
           value: "{{ .Values.env.rconPassword }}"
         - name: RCON_PORT
           value: "{{ .Values.env.rconPort }}"
+        - name: SERVER_IP
+          value: "{{ .Values.env.serverIP }}"
         - name: SERVER_NAME
           value: "{{ .Values.env.serverName }}"
         - name: SERVER_PASSWORD
           value: "{{ .Values.env.serverPassword }}"
         - name: STEAM_VAC
           value: "{{ .Values.env.steamVAC }}"
-        - name: TZ
-          value: "{{ .Values.env.tZ }}"
-        - name: USE_STEAM
-          value: "{{ .Values.env.useSteam }}"
         ports:
         - name: game-port
           containerPort: {{ .Values.env.gamePort | int }}
@@ -101,4 +105,3 @@ spec:
         persistentVolumeClaim:
           claimName: "{{ .Chart.Name }}-pvc-config"
       hostNetwork: {{ .Values.service.hostNetwork }}
-
